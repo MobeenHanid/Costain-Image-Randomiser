@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>GIS Homepage Random Image</title>
+  <title>Random Image</title>
   <style>
     body, html {
       margin: 0;
@@ -18,16 +18,20 @@
 </head>
 <body>
   <script>
-    const images = ["https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Construction+Teams+background.jpg&fileguid=4b74076d-e829-47c4-8172-5c6b650c8b70", 
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Defence+-+Teams.jpg&fileguid=cc17e807-56b4-4553-9918-e93218fe9a55", 
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Defence+2+-+Teams.jpg&fileguid=5a2b38ca-3a51-4928-a098-70a805ecfe1f", 
+    const images = [
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Construction+Teams+background.jpg&fileguid=4b74076d-e829-47c4-8172-5c6b650c8b70",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Defence+-+Teams.jpg&fileguid=cc17e807-56b4-4553-9918-e93218fe9a55",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Defence+2+-+Teams.jpg&fileguid=5a2b38ca-3a51-4928-a098-70a805ecfe1f",
       "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Digital+Teams+background.jpg&fileguid=c87d3641-814a-4b4b-bc61-771afb71653f",
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Energy+-+Teams.jpg&fileguid=f0f5a958-d1c3-4c73-be6b-ab4e76c82593", 
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Environment+Teams+background.jpg&fileguid=d0775bdb-80eb-4afa-ac0d-da22207b565f", 
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Innovation+-+Teams.jpg&fileguid=24a1e339-e324-42f4-bba8-ff4fc18bb5ef", 
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Innovation+-+Teams.jpg&fileguid=24a1e339-e324-42f4-bba8-ff4fc18bb5ef", 
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Energy+-+Teams.jpg&fileguid=f0f5a958-d1c3-4c73-be6b-ab4e76c82593",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Environment+Teams+background.jpg&fileguid=d0775bdb-80eb-4afa-ac0d-da22207b565f",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Innovation+-+Teams.jpg&fileguid=24a1e339-e324-42f4-bba8-ff4fc18bb5ef",
       "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Integrated+Transport+-+Teams.jpg&fileguid=4c92a768-56c2-4ef0-a5c6-6ba8df64ccb7",
-      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Integrated+transport+2+-+Teams.jpg&fileguid=f3d8e676-d307-40e1-8b3d-ae910df0a02d"];
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Integrated+transport+2+-+Teams.jpg&fileguid=f3d8e676-d307-40e1-8b3d-ae910df0a02d",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Project+-+Teams.jpg&fileguid=f9d77596-c5b9-4cf4-9f47-690a963499e2",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Rail+-+Teams.jpg&fileguid=92b0f412-5ae7-4c69-9158-172ce124f05c",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Roads+-+Teams.jpg&fileguid=2c416d3a-c783-4acb-964d-4785564be10c",
+      "https://interact.costain.com/Utilities/Uploads/Handler/Uploader.ashx?area=composer&filename=Water+-+Teams.jpg&fileguid=f2b05742-8e9a-4bbf-af01-a53f35744f0e"];
 
     const randomImage = images[Math.floor(Math.random() * images.length)];
     const img = document.createElement("img");
